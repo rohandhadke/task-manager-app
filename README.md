@@ -8,32 +8,6 @@ A full-stack **Task Management Application** with a secure **FastAPI backend**, 
 
 🚧 _Coming Soon_ 
 
-#### Login Page
-![Login Page](screenshots/screenshot1.png)
-
-#### Sign Up
-![Sign Up](screenshots/screenshot2.png)
-
-#### Home Page
-![Home Page](screenshots/screenshot3.png)
-
-#### Add Task 
-![Add new Task](screenshots/screenshot8.png)
-
-#### Tasks Filters according to priority and status
-![Filters](screenshots/screenshot4.png)
-
-#### Dashboard
-![Dashboard](screenshots/screenshot5.png)
-
-#### Profile
-![Profile](screenshots/screenshot6.png)
-
-#### Search Task
-![search](screenshots/screenshot7.png)
-
-
-
 ---
 
 ## 📌 Features
@@ -115,6 +89,31 @@ A full-stack **Task Management Application** with a secure **FastAPI backend**, 
 ---
 
 ### Screenshots
+
+#### Login Page
+![Login Page](screenshots/screenshot1.png)
+
+#### Sign Up
+![Sign Up](screenshots/screenshot2.png)
+
+#### Home Page
+![Home Page](screenshots/screenshot3.png)
+
+#### Add Task 
+![Add new Task](screenshots/screenshot8.png)
+
+#### Tasks Filters according to priority and status
+![Filters](screenshots/screenshot4.png)
+
+#### Dashboard
+![Dashboard](screenshots/screenshot5.png)
+
+#### Profile
+![Profile](screenshots/screenshot6.png)
+
+#### Search Task
+![search](screenshots/screenshot7.png)
+
 
 
 ---
