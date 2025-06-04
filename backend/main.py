@@ -3,17 +3,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.routers import user, task
 from app import auth, models, database
 
-# Create all tables
 models.Base.metadata.create_all(bind=database.engine)
 
-# Initialize app
 app = FastAPI(
     title="Task Management App",
 )
 
-# Enable CORS (adjust origins as needed)
 origins = [
-    "http://localhost:3000",  # React dev server
+    "http://localhost:3000",
+    "http://localhost:5173",
 ]
 
 app.add_middleware(

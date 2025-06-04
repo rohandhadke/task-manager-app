@@ -16,8 +16,11 @@ def create_task(task: schemas.TaskCreate, db: Session = Depends(database.get_db)
         title=task.title,
         description=task.description,
         status=task.status,
-        owner_id=current_user.id
+        priority=task.priority,
+        deadline=task.deadline,
+        owner_id=current_user.id,
     )
+
 
     db.add(new_task)
     db.commit()
@@ -41,6 +44,42 @@ def update_task_status(task_id: int, updated_task: schemas.TaskUpdate, db: Sessi
         raise HTTPException(status_code=403, detail="Not authorized to update this task")
 
     task.status = updated_task.status
+    db.commit()
+    db.refresh(task)
+    return task
+
+@router.delete("/{task_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_task(task_id: int, db: Session = Depends(database.get_db), current_user: models.User = Depends(auth.get_current_user)):
+    task = db.query(models.Task).filter(models.Task.id == task_id).first()
+    
+    if not task:
+        raise HTTPException(status_code=404, detail="Task not found")
+    
+    if task.owner_id != current_user.id:
+        raise HTTPException(status_code=403, detail="Not authorized to delete this task")
+
+    db.delete(task)
+    db.commit()
+    return
+
+@router.put("/update/{task_id}", response_model=schemas.Task)
+def update_full_task(task_id: int, task_data: schemas.TaskCreate, db: Session = Depends(database.get_db), current_user: models.User = Depends(auth.get_current_user)):
+    task = db.query(models.Task).filter(models.Task.id == task_id).first()
+
+    if not task:
+        raise HTTPException(status_code=404, detail="Task not found")
+
+    if task.owner_id != current_user.id:
+        raise HTTPException(status_code=403, detail="Not authorized to update this task")
+
+    task.title = task_data.title
+    task.description = task_data.description
+    task.status = task_data.status
+    task.priority = task_data.priority
+    task.priority = task_data.priority
+    task.deadline = task_data.deadline
+    print(task_data.dict())  # 👈 Shows what frontend actually sent
+
     db.commit()
     db.refresh(task)
     return task
