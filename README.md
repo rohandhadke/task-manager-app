@@ -6,13 +6,13 @@ A full-stack **Task Management Application** with a secure **FastAPI backend**, 
 
 ## 🌐 Live Demo
 
-🚧 _Coming Soon_ — Deploying on **Vercel (frontend)** and **Render / Railway (backend)**
+🚧 _Coming Soon_ 
 
 ---
 
 ## 📌 Features
 
-### ✅ Backend (FastAPI + SQLite/MySQL)
+### ✅ Backend (FastAPI + PostgreSQL)
 - JWT-based Authentication (Login/Register)
 - Profile Management (Update Info, Change Password)
 - CRUD Operations on Tasks
@@ -31,26 +31,6 @@ A full-stack **Task Management Application** with a secure **FastAPI backend**, 
 ### 🧪 Testing
 - Automated backend tests with `pytest`
 - HTML test report with `pytest-html`
-- PDF report generation with `pdfkit` + `wkhtmltopdf`
-
----
-
-## 🏗️ Project Structure
-
-
-task-manager-app/
-├── backend/
-│ ├── app/ # FastAPI App (routes, models, auth, DB)
-│ ├── tests/ # Pytest test cases
-│ ├── report.html # Generated HTML test report
-│ ├── report.pdf # Generated PDF report
-│ ├── run_tests.py # Script to run tests & generate reports
-│ └── main.py # FastAPI main entry point
-├── frontend/
-│ └── src/ # React components, pages, and assets
-│ └── App.js # Main React app
-
-
 ---
 
 ## ⚙️ Installation & Setup
@@ -78,7 +58,7 @@ task-manager-app/
 5. **Access API Docs**
     ```bash
     http://127.0.0.1:8000/docs
-
+---
 
 ### Frontend (React)
 1. **Navigate to frontend directory**
@@ -94,7 +74,8 @@ task-manager-app/
     npm run dev
 4. **Visit frontend**
     ```bash
-    http://localhost:3000
+    http://localhost:5173/
+---
 
 ### Tech Stack
 
@@ -105,11 +86,12 @@ task-manager-app/
 | Database   | SQLite (dev) / MySQL (prod) |
 | Testing    | Pytest, pytest-html         |
 | PDF Export | pdfkit, wkhtmltopdf         |
+---
 
 ### Screenshots
 
 
-
+---
 ### Author
 
 - Rohan Dhadke
