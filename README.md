@@ -85,7 +85,6 @@ A full-stack **Task Management Application** with a secure **FastAPI backend**, 
 | Backend    | FastAPI, SQLAlchemy, JWT    |
 | Database   | SQLite (dev) / MySQL (prod) |
 | Testing    | Pytest, pytest-html         |
-| PDF Export | pdfkit, wkhtmltopdf         |
 ---
 
 ### Screenshots
