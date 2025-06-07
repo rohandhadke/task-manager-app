@@ -81,7 +81,7 @@ A full-stack **Task Management Application** with a secure **FastAPI backend**, 
 
 | Layer      | Tech                        |
 | ---------- | --------------------------- |
-| Frontend   | React, Tailwind CSS         |
+| Frontend   | React, Bootstrap            |
 | Backend    | FastAPI, SQLAlchemy, JWT    |
 | Database   | PostgreSQL                  |
 | Testing    | Pytest, pytest-html         |
